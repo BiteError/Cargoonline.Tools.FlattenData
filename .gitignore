@@ -1,0 +1,9 @@
+src/packages/
+*.cache
+*/TemporaryGeneratedFile_*.cs
+*.xml
+*.exe
+*.pdb
+*.dll
+src/*/obj/
+src/.vs/Cargoonline.Tools.FlattenData/v14/.suo
