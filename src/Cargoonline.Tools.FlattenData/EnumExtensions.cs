@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Cargoonline.Tools.FlattenData
 {
@@ -16,8 +17,8 @@ namespace Cargoonline.Tools.FlattenData
         public static TReturn GetAttributeOfType<TEnum, TReturn>(this TEnum enumVal) where TReturn : Attribute
         {
             var type = enumVal.GetType();
-            var memInfo = type.GetMember(enumVal.ToString());
-            var attributes = memInfo[0].GetCustomAttributes(typeof(TReturn), false);
+            var memInfo = type.GetTypeInfo().DeclaredMembers.Single(x => x.Name == enumVal.ToString());
+            var attributes = memInfo.GetCustomAttributes(typeof(TReturn), false).ToArray();
             return (attributes.Length > 0) ? (TReturn)attributes[0] : null;
         }
 
@@ -53,7 +54,7 @@ namespace Cargoonline.Tools.FlattenData
             {
                 RelatedToTypes[valueType][entityType] = !attributeOfType.ForEntitiesTypes.Any() ||
                                                   attributeOfType.ForEntitiesTypes.Any(
-                                                      t => entityType.IsSubclassOf(t) || entityType == t);
+                                                      t => entityType.GetTypeInfo().IsSubclassOf(t) || entityType == t);
             }
 
             return RelatedToTypes[valueType][entityType];
@@ -92,7 +93,7 @@ namespace Cargoonline.Tools.FlattenData
         public static bool IsNullable<TEnum>(this TEnum enumVal)
         {
             var type = GetTypeConstraintAttribute(enumVal).ValueType;
-            return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
+            return type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
         }
     }
 }

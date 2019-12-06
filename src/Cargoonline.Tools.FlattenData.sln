@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cargoonline.Tools.FlattenData", "Cargoonline.Tools.FlattenData\Cargoonline.Tools.FlattenData.csproj", "{E036A848-BC79-4D42-85A7-A1A09EFB1230}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cargoonline.Tools.FlattenData", "Cargoonline.Tools.FlattenData\Cargoonline.Tools.FlattenData.csproj", "{E036A848-BC79-4D42-85A7-A1A09EFB1230}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cargoonline.Tools.FlattenData.Tests", "Cargoonline.Tools.FlattenData.Tests\Cargoonline.Tools.FlattenData.Tests.csproj", "{A429CA64-2E51-4F89-BFF9-5F4439FECEA8}"
 EndProject
@@ -17,12 +17,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Debug|x64.ActiveCfg = Debug|x64
-		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Debug|x64.Build.0 = Debug|x64
+		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Debug|x64.Build.0 = Debug|Any CPU
 		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Release|x64.ActiveCfg = Release|x64
-		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Release|x64.Build.0 = Release|x64
+		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Release|x64.ActiveCfg = Release|Any CPU
+		{E036A848-BC79-4D42-85A7-A1A09EFB1230}.Release|x64.Build.0 = Release|Any CPU
 		{A429CA64-2E51-4F89-BFF9-5F4439FECEA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A429CA64-2E51-4F89-BFF9-5F4439FECEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A429CA64-2E51-4F89-BFF9-5F4439FECEA8}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -34,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B316731F-3101-49FB-AAAD-75558A3D0D59}
 	EndGlobalSection
 EndGlobal
