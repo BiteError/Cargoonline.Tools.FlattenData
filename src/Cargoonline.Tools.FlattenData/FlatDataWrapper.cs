@@ -116,7 +116,7 @@ namespace Cargoonline.Tools.FlattenData
 
         private static TEnum GetValueName<TEnum>(string name) where TEnum : struct, IConvertible
         {
-            if (!typeof(TEnum).IsEnum)
+            if (!typeof(TEnum).GetTypeInfo().IsEnum)
             {
                 throw new ArgumentException($"{typeof(TEnum)} must be an enumerated type");
             }
